@@ -1,0 +1,2 @@
+kubectl port-forward [pod-name] 4222:4222
+kubectl port-forward nats-depl-5fffd44bb6-wkjgt 8222:8222

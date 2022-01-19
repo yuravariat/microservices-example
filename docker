@@ -1,0 +1,7 @@
+#!/bin/bash
+echo "custom docker file"
+if [[ "$1" = 'build' ]]; then
+  exec /usr/bin/docker build --network=host "${@:2}"
+else
+  exec /usr/bin/docker "$@"
+fi

@@ -1,0 +1,10 @@
+sudo service docker start
+minikube start --driver=docker
+minikube addons enable ingress 
+eval $(minikube docker-env)
+skaffold config set --global local-cluster true
+eval $(minikube -p custom docker-env)
+kubectl create secret generic jwt-secret --from-literal=JWT_KEY=testkey
+
+
+Restart-Service LxssManager

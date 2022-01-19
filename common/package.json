@@ -1,0 +1,31 @@
+{
+  "name": "@yuriv-test/common",
+  "version": "1.0.20",
+  "descriptigiton": "",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "files": [
+    "build/**/*"
+  ],
+  "scripts": {
+    "clean": "del ./build/*",
+    "build": "npm run clean && tsc",
+    "pub": "git add . && git commit -m \"Updates\" && npm version patch && npm publish"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/cookie-session": "^2.0.43",
+    "@types/express": "^4.17.12",
+    "@types/jsonwebtoken": "^8.5.6",
+    "cookie-session": "^1.4.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.11.1",
+    "jsonwebtoken": "^8.5.1",
+    "node-nats-streaming": "^0.3.2"
+  },
+  "devDependencies": {
+    "del-cli": "^4.0.0",
+    "typescript": "^4.3.2"
+  }
+}
