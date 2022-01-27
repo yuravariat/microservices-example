@@ -3,3 +3,5 @@ az ad sp create-for-rbac --scope $groupId --role Contributor --sdk-auth
 
 registryId=$(az acr show --name azurecontainersyuri --query id --output tsv)
 az role assignment create --assignee clientid --scope $registryId --role AcrPush
+
+
